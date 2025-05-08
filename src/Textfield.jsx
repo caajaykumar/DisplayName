@@ -8,10 +8,10 @@ const Textfield = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Save submitted name
+    
     setSubmittedName({ firstName, lastName });
 
-    // Clear input fields
+    
     setFirstName('');
     setLastName('');
   };
@@ -53,7 +53,7 @@ const Textfield = () => {
       {submittedName && (
         <div style={{ marginTop: '20px' }}>
           <label>
-            Full Name: {submittedName.firstName} {submittedName.lastName}
+          <strong> Full Name: {submittedName.firstName} {submittedName.lastName} </strong> 
           </label>
         </div>
       )}
