@@ -50,7 +50,7 @@ const Textfield = () => {
         {submittedName && (
           <div style={{ marginTop: '20px' }}>
             <label>
-              Full Name: <strong>{submittedName.firstName} {submittedName.lastName}</strong>
+              Full Name: {submittedName.firstName} {submittedName.lastName}
             </label>
           </div>
         )}
