@@ -9,13 +9,6 @@ const Textfield = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!firstName.trim() || !lastName.trim()) {
-      setError('Both first and last name are required.');
-      setSubmittedName(null);
-      return;
-    }
-
-    setError('');
     setSubmittedName({ firstName, lastName });
   };
 
@@ -52,14 +45,12 @@ const Textfield = () => {
           <button type="submit" className="button">Submit</button>
         </div>
 
-        {error && (
-          <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>
-        )}
+      
 
         {submittedName && (
           <div style={{ marginTop: '20px' }}>
             <label>
-              Full name: <strong>{submittedName.firstName} {submittedName.lastName}</strong>
+              Full Name: <strong>{submittedName.firstName} {submittedName.lastName}</strong>
             </label>
           </div>
         )}
