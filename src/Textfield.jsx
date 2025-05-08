@@ -4,12 +4,16 @@ const Textfield = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [submittedName, setSubmittedName] = useState(null);
-  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Save submitted name
     setSubmittedName({ firstName, lastName });
+
+    // Clear input fields
+    setFirstName('');
+    setLastName('');
   };
 
   return (
@@ -41,20 +45,18 @@ const Textfield = () => {
           />
         </div>
 
-        <div style={{ marginTop: '10px' }}>
+        <div style={{ marginTop: '1px' }}>
           <button type="submit" className="button">Submit</button>
         </div>
-
-      
-
-        {submittedName && (
-          <div style={{ marginTop: '20px' }}>
-            <label>
-              Full Name: {submittedName.firstName} {submittedName.lastName}
-            </label>
-          </div>
-        )}
       </form>
+
+      {submittedName && (
+        <div style={{ marginTop: '20px' }}>
+          <label>
+            Full Name: {submittedName.firstName} {submittedName.lastName}
+          </label>
+        </div>
+      )}
     </div>
   );
 };
