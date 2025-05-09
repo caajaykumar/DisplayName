@@ -12,8 +12,8 @@ const Textfield = () => {
     setSubmittedName({ firstName, lastName });
 
     
-    setFirstName('');
-    setLastName('');
+    // setFirstName('');
+    // setLastName('');
   };
 
   return (
